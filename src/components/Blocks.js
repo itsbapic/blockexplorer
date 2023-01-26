@@ -1,6 +1,8 @@
 import { Alchemy, Network } from 'alchemy-sdk';
 import { useEffect, useState } from 'react';
 
+import Button from '@mui/material/Button';
+
 // Refer to the README doc for more information about using API
 // keys in client-side code. You should never do this in production
 // level code.
@@ -14,18 +16,23 @@ function Blocks() {
     const [blockNumber, setBlockNumber] = useState();
     const [block, setBlock] = useState();
 
-    useEffect(() => {
-        async function getBlock(blockNum = "latest") {
-            if (blockNum === "latest") {
-                setBlockNumber(await alchemy.core.getBlockNumber());
-                setBlock(await alchemy.core.getBlock(blockNum))
-                console.log(block)
-            } else {
-                setBlockNumber(await blockNum);
-                setBlock(await alchemy.core.getBlock(blockNum))
-                console.log(block)
-            }
+    async function getBlock(blockNum = "latest") {
+        if (blockNum === "latest") {
+            setBlockNumber(await alchemy.core.getBlockNumber());
+            setBlock(await alchemy.core.getBlock(blockNum))
+            console.log(block)
+        } else {
+            setBlockNumber(await blockNum);
+            setBlock(await alchemy.core.getBlock(blockNum))
+            console.log(block)
         }
+    }
+
+    // componentDidMount() {
+    //     getBlock()
+    // }
+
+    useEffect(() => {
 
         const intervalId = setInterval(() => {
             getBlock();
@@ -38,6 +45,8 @@ function Blocks() {
         {typeof block === "undefined" ? <div>Block is Empty</div> :
             <>
                 <div className="BlockNum">Block Num: {blockNumber}</div>
+                <Button variant="contained">Hello World</Button>
+
                 <div className="Block">
                     <div>Hash: {block.hash || ""}</div>
                     <div>Parent Hash: {block.parentHash || ""}</div>

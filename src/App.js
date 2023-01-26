@@ -1,6 +1,8 @@
 // import { Alchemy, Network } from 'alchemy-sdk';
 // import { useEffect, useState } from 'react';
 import Blocks from "./components/Blocks"
+import TestCard from "./components/TestCard"
+import MyComponent from "./components/MyComponent"
 
 import './App.css';
 
@@ -31,7 +33,12 @@ function App() {
   //   getLatestBlockNumber();
   // });
 
-  return <Blocks />;
+  return <>
+    {/* <Blocks />; */}
+    {/* <TestCard />; */}
+    <MyComponent />;
+
+  </>
 }
 
 export default App;
