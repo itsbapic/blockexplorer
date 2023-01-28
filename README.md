@@ -126,3 +126,10 @@ Read more about the above in the [Alchemy SDK Surface docs](https://docs.alchemy
 - What transfers did an address receive this year?
 
 Good luck and have fun!
+
+# ⏺️🌞How I acheived the goals here! (Or attempted to)🌞⏺️
+
+Biggest downfall was fundemental knowledge of React & CSS/SCSS. 
+Obviously this will be something I can improve upon over time, but this alone set me back much more than I was comfortable with.
+The great thing about this project is the fact that I can develop it over time as I feel it could have a fun application once the UI gets working. <em>(I love the neomorphism!)</em>
+State management and passing between different React components will be something I continue learning until I feel I have a solid foundational understanding, and how I can apply the knowledge to other projects in the future.

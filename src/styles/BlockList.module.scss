@@ -13,8 +13,13 @@
 .arrow {
     @include title-text;
     font-weight: 100 !important;
-    margin-top: 280px;
+    margin-top: 315px;
     font-size: 6em !important;
     margin-left: -20px;
     margin-right: -20px;
+    opacity: 40%;
+    &:hover {
+        opacity: 100%;
+        cursor: pointer;
+    }
 }
