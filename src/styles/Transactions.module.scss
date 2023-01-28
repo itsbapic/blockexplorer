@@ -1,0 +1,24 @@
+@import "../styles/_variables.scss";
+@import "../styles/mixins";
+
+// TRANSACTION ITEMS
+.transactionsCard {
+    @include item-text;
+    // position: sticky;
+    padding: 20px;
+    padding-block: 24px;
+    margin: 30px;
+    border-radius: 20px;
+    background: linear-gradient(145deg, #f1f4fa, #cbcdd3);
+    box-shadow: $primary-box-shadow;
+    min-height: 360px;
+    // overflow: visible;
+    // width: 58vw;
+    font-family: "Nunito Sans", sans-serif;
+    color: #5a5a5a;
+    transition: opacity 1s ease-in-out;
+}
+
+.title {
+    @include title-text;
+}

@@ -1,0 +1,68 @@
+@import "../styles/_variables.scss";
+@import "../styles/mixins";
+
+// BLOCK ITEMS
+.blockCard {
+    @include item-text;
+    padding: 20px;
+    padding-block: 24px;
+    margin: 30px;
+    border-radius: 20px;
+    background: linear-gradient(145deg, #f1f4fa, #cbcdd3);
+    box-shadow: $primary-box-shadow;
+    min-height: 360px;
+    overflow: hidden;
+    width: max-content;
+    font-family: "Nunito Sans", sans-serif;
+    color: #5a5a5a;
+    transition: 1s ease-in-out;
+
+    .blockNum {
+        @include title-text;
+    }
+    .blockItemLabel {
+        padding: 0px;
+        margin-top: 3px;
+        margin-bottom: 0px;
+    }
+    .blockItemValue {
+        padding: 8px 15px 8px 15px;
+        padding-bottom: 5px;
+        margin-top: 4px;
+        margin-bottom: 5px;
+        border-radius: 6px;
+        background: linear-gradient(145deg, #f5f8ff, #ced1d7);
+        box-shadow: inset 5px 5px 10px #c3c5cb, inset -5px -5px 10px #ffffff;
+    }
+}
+
+.blockFarLeft {
+    opacity: 30%;
+    transform: perspective(500px) translate3d(400px, 0, 0px);
+    scale: 70%;
+    z-index: -5;
+}
+
+.blockLeft {
+    opacity: 60%;
+    transform: perspective(500px) translate3d(115px, 0, 0px);
+    scale: 80%;
+    z-index: -3;
+}
+
+.blockMiddle {
+}
+
+.blockRight {
+    opacity: 60%;
+    transform: perspective(500px) translate3d(-115px, 0, 0px);
+    scale: 80%;
+    z-index: -3;
+}
+
+.blockFarRight {
+    opacity: 30%;
+    transform: perspective(500px) translate3d(-400px, 0, 0px);
+    scale: 70%;
+    z-index: -5;
+}

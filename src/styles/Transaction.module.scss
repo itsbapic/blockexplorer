@@ -1,0 +1,48 @@
+@import "../styles/_variables.scss";
+@import "../styles/mixins";
+
+// TRANSACTION ITEMS
+.transactionCard {
+    @include item-text;
+    // position: sticky;
+    padding: 20px;
+    padding-block: 24px;
+    margin: 30px;
+    border-radius: 20px;
+    background: linear-gradient(145deg, #f1f4fa, #cbcdd3);
+    box-shadow: $primary-box-shadow;
+    min-height: 360px;
+    // overflow: visible;
+    // width: 2vw;
+    font-family: "Nunito Sans", sans-serif;
+    color: #5a5a5a;
+    transition: opacity 1s ease-in-out;
+
+    .blockNum {
+        align-items: center;
+        color: #5a5a5a;
+        font-weight: 800;
+        font-size: 1.1rem;
+        line-height: 1;
+        letter-spacing: 0.8px;
+        margin-bottom: 20px;
+    }
+    .blockItemLabel {
+        padding: 0px;
+        margin-top: 3px;
+        margin-bottom: 0px;
+    }
+    .blockItemValue {
+        padding: 8px 15px 8px 15px;
+        padding-bottom: 5px;
+        margin-top: 4px;
+        margin-bottom: 5px;
+        border-radius: 6px;
+        background: linear-gradient(145deg, #f5f8ff, #ced1d7);
+        box-shadow: inset 5px 5px 10px #c3c5cb, inset -5px -5px 10px #ffffff;
+    }
+}
+
+.title {
+    @include title-text;
+}

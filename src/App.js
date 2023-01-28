@@ -1,10 +1,12 @@
 // import { Alchemy, Network } from 'alchemy-sdk';
 // import { useEffect, useState } from 'react';
-import Blocks from "./components/Blocks"
-import TestCard from "./components/TestCard"
-import MyComponent from "./components/MyComponent"
+import BlockList from "./components/BlockList"
+import TransactionContainer from "./components/TransactionContainer"
 
-import './App.css';
+import './App.scss';
+import styles from "./styles/BlockList.module.scss"
+import Txstyles from "./styles/TransactionContainer.module.scss"
+
 
 // Refer to the README doc for more information about using API
 // keys in client-side code. You should never do this in production
@@ -14,7 +16,6 @@ import './App.css';
 //   network: Network.ETH_MAINNET,
 // };
 
-
 // In this week's lessons we used ethers.js. Here we are using the
 // Alchemy SDK is an umbrella library with several different packages.
 //
@@ -23,21 +24,10 @@ import './App.css';
 // const alchemy = new Alchemy(settings);
 
 function App() {
-  // const [blockNumber, setBlockNumber] = useState();
-
-  // useEffect(() => {
-  //   async function getLatestBlockNumber() {
-  //     setBlockNumber(await alchemy.core.getBlockNumber());
-  //   }
-
-  //   getLatestBlockNumber();
-  // });
 
   return <>
-    {/* <Blocks />; */}
-    {/* <TestCard />; */}
-    <MyComponent />;
-
+    <BlockList style={`${styles.blockList}`} />
+    <TransactionContainer style={`${Txstyles.BlockList}`} />
   </>
 }
 
